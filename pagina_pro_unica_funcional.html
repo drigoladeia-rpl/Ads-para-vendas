@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Página Pro — Modelos</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;background:#f5f7fa;color:#17202a}
+button,a{font:inherit}.top{position:sticky;top:0;z-index:50;background:#111827;color:white;padding:12px 16px}.bar{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;font-size:19px}.menuBtn{background:#1f2937;color:#fff;border:1px solid #475569;border-radius:10px;padding:10px 13px;font-weight:800}.menu{display:none;position:absolute;right:16px;top:62px;background:#fff;border-radius:14px;padding:7px;box-shadow:0 15px 35px #0003;min-width:230px}.menu.open{display:block}.menu button{display:block;width:100%;border:0;background:#fff;text-align:left;padding:13px;border-radius:9px;font-weight:800}.menu button:hover{background:#eef2f7}
+.view{display:none}.view.active{display:block}.hero{min-height:570px;background-size:cover;background-position:center;position:relative;display:flex;align-items:center}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000c,#0003)}.heroIn{position:relative;max-width:1100px;width:100%;margin:auto;padding:60px 18px;color:#fff}.tag{font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(42px,7vw,76px);line-height:.98;max-width:760px;margin:14px 0}.hero p{max-width:650px;font-size:18px;line-height:1.55;color:#e5e7eb}.btn{display:inline-block;border:0;border-radius:10px;padding:14px 18px;background:#16a34a;color:#fff;font-weight:900;text-decoration:none;margin:8px 8px 0 0;cursor:pointer}.btn.alt{background:#fff;color:#111827}
+.wrap{max-width:1100px;margin:auto;padding:60px 18px}.section{background:#fff;border-radius:18px;padding:24px;margin-bottom:18px;box-shadow:0 6px 25px #0f172a12}.title{font-size:34px;margin:0 0 10px}.lead{color:#64748b;line-height:1.6;max-width:720px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:25px}.grid4{grid-template-columns:repeat(4,1fr)}.card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;box-shadow:0 7px 25px #0f172a10}.card img{width:100%;height:220px;object-fit:cover;display:block}.cardbody{padding:18px}.card h3{margin:0 0 7px}.muted{color:#64748b;line-height:1.45}.price{font-weight:900;margin-top:10px}.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.about img{width:100%;height:390px;object-fit:cover;border-radius:20px}.dark{background:#111827;color:#fff}.dark .lead{color:#cbd5e1}.contact{text-align:center;border-radius:20px;padding:45px 20px}.footer{text-align:center;color:#64748b;padding:30px}
+.switch{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.switch button{border:1px solid #ffffff55;background:#ffffff18;color:#fff;border-radius:9px;padding:9px 12px;font-weight:800;cursor:pointer}
+@media(max-width:760px){.grid,.grid4,.about{grid-template-columns:1fr}.hero{min-height:590px}.about img{height:300px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar"><div class="logo">🚀 PÁGINA PRO</div><button class="menuBtn" onclick="toggleMenu()">☰ MODELOS</button></div>
+<nav class="menu" id="menu">
+<button onclick="show('home')">🏠 Página inicial</button>
+<button onclick="show('barbearia')">💈 Barbearia</button>
+<button onclick="show('loja')">🛍️ Loja / Comércio</button>
+<button onclick="show('restaurante')">🍽️ Restaurante</button>
+</nav></header>
+
+<section id="home" class="view active">
+<div class="hero" style="background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=85')"><div class="heroIn"><div class="tag">Páginas profissionais</div><h1>Sua empresa mais forte na internet.</h1><p>Sites modernos, responsivos e pensados para apresentar sua empresa e transformar visitantes em contatos.</p><button class="btn" onclick="document.getElementById('modelos').scrollIntoView()">👀 Ver modelos</button></div></div>
+<div class="wrap"><section class="section"><h2 class="title">Veja como sua empresa pode ficar</h2><p class="lead">Cada botão abre uma página completa. Você pode navegar entre todos os modelos sem sair deste arquivo.</p>
+<div class="grid" id="modelos">
+<div class="card"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=85"><div class="cardbody"><h3>💈 Barbearia</h3><p class="muted">Serviços, galeria, apresentação e agendamento.</p><button class="btn" onclick="show('barbearia')">Abrir página →</button></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=85"><div class="cardbody"><h3>🛍️ Loja / Comércio</h3><p class="muted">Vitrine, produtos, ofertas e atendimento.</p><button class="btn" onclick="show('loja')">Abrir página →</button></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=85"><div class="cardbody"><h3>🍽️ Restaurante</h3><p class="muted">Cardápio, pratos, ambiente e reservas.</p><button class="btn" onclick="show('restaurante')">Abrir página →</button></div></div>
+</div></section>
+<section class="section dark contact"><h2 class="title">Gostou de algum modelo?</h2><p class="lead">Podemos personalizar tudo para sua empresa.</p><a class="btn" target="_blank" href="https://wa.me/5519983348735?text=Ol%C3%A1!%20Vi%20os%20modelos%20e%20quero%20uma%20p%C3%A1gina%20para%20minha%20empresa.">📲 Quero minha demonstração</a></section></div>
+</section>
+
+<script>
+const D={
+barbearia:{tag:"Barbearia • Estilo • Cuidado",title:"💈 Mais que um corte. Um estilo de vida.",intro:"Uma página profissional para apresentar serviços, espaço, equipe, galeria e facilitar o agendamento.",hero:"https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=85",aboutImg:"https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=85",about:"Apresente a história da barbearia, os profissionais, o ambiente e os diferenciais do atendimento.",items:[["✂️","Corte Masculino","Corte personalizado","A partir de R$ 40"],["🧔","Barba","Toalha quente e acabamento","A partir de R$ 30"],["🔥","Corte + Barba","Combo completo","A partir de R$ 65"]],imgs:["https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=700&q=85"]},
+loja:{tag:"Loja • Moda • Novidades",title:"🛍️ Moda que valoriza você.",intro:"Uma vitrine digital elegante para apresentar produtos, novidades, promoções e atendimento.",hero:"https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=85",aboutImg:"https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85",about:"Apresente sua marca, conte sua história e coloque os principais produtos em destaque.",items:[["👗","Vestido Feminino","Elegante e versátil","R$ 89,90"],["👟","Tênis Casual","Conforto para o dia a dia","R$ 149,90"],["👜","Bolsa Elegante","Modelo para diversas ocasiões","R$ 129,90"],["⌚","Relógio","Design clássico","R$ 99,90"]],imgs:["https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=85"]},
+restaurante:{tag:"Restaurante • Sabores • Experiências",title:"🍽️ Boa comida faz momentos melhores.",intro:"Uma página completa para mostrar o ambiente, cardápio, pratos especiais, horários e facilitar pedidos ou reservas.",hero:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=85",aboutImg:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85",about:"Apresente a história do restaurante, o ambiente e os pratos que fazem os clientes voltarem.",items:[["🥩","Picanha na Chapa","Carne grelhada e acompanhamentos","R$ 89,90"],["🐟","Salmão Grelhado","Salmão, legumes e acompanhamento","R$ 79,90"],["🍝","Massas Especiais","Massa artesanal com molho da casa","R$ 49,90"]],imgs:["https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=85"]}
+};
+function toggleMenu(){document.getElementById('menu').classList.toggle('open')}
+function show(key){
+document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+if(key==='home'){document.getElementById('home').classList.add('active');window.scrollTo(0,0);document.getElementById('menu').classList.remove('open');return}
+let d=D[key], id='page-'+key, old=document.getElementById(id);
+if(!old){old=document.createElement('section');old.id=id;old.className='view';old.innerHTML=`
+<div class="hero" style="background-image:url('${d.hero}')"><div class="heroIn">
+<div class="switch"><button onclick="show('home')">← Página inicial</button><button onclick="show('barbearia')">💈 Barbearia</button><button onclick="show('loja')">🛍️ Loja</button><button onclick="show('restaurante')">🍽️ Restaurante</button></div>
+<div class="tag">${d.tag}</div><h1>${d.title}</h1><p>${d.intro}</p>
+<a class="btn" target="_blank" href="https://wa.me/5519983348735?text=Ol%C3%A1!%20Vi%20este%20modelo%20e%20quero%20uma%20p%C3%A1gina%20assim%20para%20minha%20empresa.">📲 Quero uma página assim</a></div></div>
+<div class="wrap"><section class="about section"><div><div class="tag" style="color:#16a34a">APRESENTAÇÃO</div><h2 class="title">Uma presença profissional para o seu negócio.</h2><p class="lead">${d.about}</p><p class="lead">Fotos, endereço, horário, redes sociais, mapa e WhatsApp podem ser personalizados para o cliente real.</p></div><img src="${d.aboutImg}" alt="Imagem demonstrativa"></section>
+<section class="section"><h2 class="title">Destaques</h2><div class="grid">${d.items.map(x=>`<article class="card"><img src="${d.imgs[d.items.indexOf(x)%d.imgs.length]}" alt="${x[1]}"><div class="cardbody"><h3>${x[0]} ${x[1]}</h3><p class="muted">${x[2]}</p><div class="price">${x[3]}</div></div></article>`).join('')}</div></section>
+<section class="section"><h2 class="title">📸 Galeria</h2><div class="grid grid4">${d.imgs.map((x,i)=>`<img src="${x}" alt="Galeria ${i+1}" style="width:100%;height:220px;object-fit:cover;border-radius:15px">`).join('')}</div></section>
+<section class="section"><h2 class="title">📍 Informações</h2><div class="grid grid4"><div><b>Localização</b><p class="muted">Endereço e mapa</p></div><div><b>Horários</b><p class="muted">Funcionamento</p></div><div><b>Redes sociais</b><p class="muted">Instagram e outros canais</p></div><div><b>Contato</b><p class="muted">WhatsApp comercial</p></div></div></section>
+<section class="section dark contact"><h2 class="title">Vamos criar a sua?</h2><p class="lead">Este é um modelo demonstrativo. Podemos adaptar tudo para sua empresa.</p><a class="btn" target="_blank" href="https://wa.me/5519983348735?text=Ol%C3%A1!%20Quero%20criar%20uma%20p%C3%A1gina%20profissional%20para%20minha%20empresa.">📲 Falar pelo WhatsApp</a></section>
+<footer class="footer">Página Pro • Modelo demonstrativo</footer></div>`;
+document.body.appendChild(old)}
+old.classList.add('active');document.getElementById('menu').classList.remove('open');window.scrollTo(0,0);
+}
+</script>
+</body></html>
